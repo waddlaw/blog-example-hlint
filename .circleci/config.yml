@@ -11,3 +11,8 @@ jobs:
             apt update
             apt install -y curl
             curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
+workflows:
+  version: 2
+  hlint:
+    jobs:
+      - hlint
