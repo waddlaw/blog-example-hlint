@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  hlint:
+    docker:
+      - image: ubuntu:16.04
+    steps:
+      - checkout
+      - run:
+          name: Run hlint
+          command: |
+            apt update
+            apt install -y curl
+            curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
