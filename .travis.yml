@@ -1,0 +1,6 @@
+sudo: false
+language: generic
+jobs:
+  include:
+    - stage: Run hlint
+      script: curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
